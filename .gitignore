@@ -1,0 +1,84 @@
+# ==========================================
+# GITIGNORE - Sistema de Análisis Automotriz
+# ==========================================
+
+# ------------------------------------------
+# 1. Credenciales y Archivos Sensibles
+# ------------------------------------------
+# Cookies de sesión activas de Facebook (¡Contiene tokens de acceso!)
+auth.json
+backend/auth.json
+
+# Cuentas de servicio e integración con Google Cloud / Sheets
+service_account*.json
+backend/service_account*.json
+
+# Archivos de variables de entorno
+.env
+.env.*
+!.env.example
+
+# Llaves privadas y certificados SSL/TLS
+*.pem
+*.key
+*.crt
+*.pfx
+*.p12
+
+# ------------------------------------------
+# 2. Base de Datos Local y Almacenamiento
+# ------------------------------------------
+*.db
+*.sqlite
+*.sqlite3
+backend/automotive_mvp.db
+
+# ------------------------------------------
+# 3. Entornos Virtuales y Dependencias Python
+# ------------------------------------------
+venv/
+env/
+ENV/
+.venv/
+__pycache__/
+backend/__pycache__/
+backend/*/__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# ------------------------------------------
+# 4. Dependencias y Builds Frontend (Node / Svelte / Vite)
+# ------------------------------------------
+node_modules/
+frontend/node_modules/
+dist/
+frontend/dist/
+dist-ssr/
+.svelte-kit/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# ------------------------------------------
+# 5. Dumps de Datos y Archivos Temporales de Scraping
+# ------------------------------------------
+chileautos_dump.html
+backend/chileautos_sample.html
+next_data_parsed.json
+search_core_response.json
+*.dump
+
+# ------------------------------------------
+# 6. Configuraciones de IDE y Sistema Operativo
+# ------------------------------------------
+.vscode/*
+!.vscode/extensions.json
+frontend/.vscode/*
+!frontend/.vscode/extensions.json
+.idea/
+.DS_Store
+Thumbs.db
